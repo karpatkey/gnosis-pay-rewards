@@ -409,7 +409,7 @@ importers:
         version: 6.9.0
       forge-std:
         specifier: github:foundry-rs/forge-std#v1
-        version: github.com/foundry-rs/forge-std/07263d193d621c4b2b0ce8b4d54af58f6957d97d
+        version: git@github.com+foundry-rs/forge-std/07263d193d621c4b2b0ce8b4d54af58f6957d97d
       hardhat:
         specifier: ^2.19.3
         version: 2.19.3(ts-node@10.9.2)(typescript@5.5.2)
@@ -430,7 +430,7 @@ importers:
         version: 8.3.0(eslint@8.56.0)
       eslint-config-turbo:
         specifier: latest
-        version: 2.0.4(eslint@8.56.0)
+        version: 2.0.6(eslint@8.56.0)
     devDependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.0.2
@@ -454,8 +454,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(rollup@3.20.2)
       '@rollup/plugin-node-resolve':
-        specifier: ^15.0.2
-        version: 15.0.2(rollup@3.20.2)
+        specifier: ^15.2.3
+        version: 15.2.3(rollup@3.20.2)
       '@rollup/plugin-typescript':
         specifier: ^11.1.0
         version: 11.1.0(rollup@3.20.2)(typescript@5.5.2)
@@ -8450,11 +8450,11 @@ packages:
       rollup: 3.20.2
     dev: false
 
-  /@rollup/plugin-node-resolve@15.0.2(rollup@3.20.2):
-    resolution: {integrity: sha512-Y35fRGUjC3FaurG722uhUuG8YHOJRJQbI6/CkbRkdPotSpDj9NtIN85z1zrcyDcCQIW4qp5mgG72U+gJ0TAFEg==}
+  /@rollup/plugin-node-resolve@15.2.3(rollup@3.20.2):
+    resolution: {integrity: sha512-j/lym8nf5E21LwBT4Df1VD6hRO2L2iwUeUmP7litikRsVp1H6NWx20NEp0Y7su+7XGc476GnXXc4kFeZNGmaSQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^2.78.0||^3.0.0
+      rollup: ^2.78.0||^3.0.0||^4.0.0
     peerDependenciesMeta:
       rollup:
         optional: true
@@ -14523,13 +14523,13 @@ packages:
       eslint: 8.56.0
     dev: false
 
-  /eslint-config-turbo@2.0.4(eslint@8.56.0):
-    resolution: {integrity: sha512-zGvU+bxoNWVvSl0prGItrnH9FgeNzKEAjRmv8ruqql1psI37T8IoLF/XeOzT3CzzYzJxuI3wW1yb2agDFYQdHQ==}
+  /eslint-config-turbo@2.0.6(eslint@8.56.0):
+    resolution: {integrity: sha512-PkRjFnZUZWPcrYT4Xoi5OWOUtnn6xVGh88I6TsayiH4AQZuLs/MDmzfJRK+PiWIrI7Q7sbsVEQP+nUyyRE3uAw==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
       eslint: 8.56.0
-      eslint-plugin-turbo: 2.0.4(eslint@8.56.0)
+      eslint-plugin-turbo: 2.0.6(eslint@8.56.0)
     dev: false
 
   /eslint-import-resolver-node@0.3.9:
@@ -14755,8 +14755,8 @@ packages:
       string.prototype.matchall: 4.0.11
     dev: true
 
-  /eslint-plugin-turbo@2.0.4(eslint@8.56.0):
-    resolution: {integrity: sha512-Ozn//vTXJeqIEvEkThM2vuuldMckPqAne7vg/S3GxF+BBY516cjdp7+dYpCU5Q0083hVm638c8542ubccNE+8w==}
+  /eslint-plugin-turbo@2.0.6(eslint@8.56.0):
+    resolution: {integrity: sha512-yGnpMvyBxI09ZrF5bGpaniBz57MiExTCsRnNxP+JnbMFD+xU3jG3ukRzehVol8LYNdC/G7E4HoH+x7OEpoSGAQ==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
@@ -25272,8 +25272,8 @@ packages:
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
 
-  github.com/foundry-rs/forge-std/07263d193d621c4b2b0ce8b4d54af58f6957d97d:
-    resolution: {tarball: https://codeload.github.com/foundry-rs/forge-std/tar.gz/07263d193d621c4b2b0ce8b4d54af58f6957d97d}
+  git@github.com+foundry-rs/forge-std/07263d193d621c4b2b0ce8b4d54af58f6957d97d:
+    resolution: {commit: 07263d193d621c4b2b0ce8b4d54af58f6957d97d, repo: git@github.com:foundry-rs/forge-std.git, type: git}
     name: forge-std
     version: 1.9.1
     dev: true
