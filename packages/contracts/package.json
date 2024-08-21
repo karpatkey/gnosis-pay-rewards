@@ -22,7 +22,7 @@
     "@prb/test": "^0.6.4",
     "ethers": "^6.9.0",
     "forge-std": "github:foundry-rs/forge-std#v1",
-    "hardhat": "^2.19.3",
+    "hardhat": "^2.22.9",
     "hardhat-deploy": "^0.11.45",
     "ts-node": "^10.9.1",
     "@nomiclabs/hardhat-etherscan": "^3.1.7"
