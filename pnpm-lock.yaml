@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -335,7 +339,7 @@ importers:
         version: 8.56.0
       eslint-plugin-import:
         specifier: ^2.26.0
-        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        version: 2.29.1(@typescript-eslint/parser@5.62.0)(eslint@8.56.0)
       jest:
         specifier: ^27.5.1
         version: 27.5.1(ts-node@10.9.2)
@@ -374,7 +378,7 @@ importers:
         version: 8.5.10
       '@wagmi/core':
         specifier: ^0.8.5
-        version: 0.8.5(@types/react@18.0.26)(@walletconnect/ethereum-provider@2.10.0)(debug@4.3.4)(ethers@5.7.2)(immer@10.1.1)(react@18.2.0)(typescript@5.5.2)(zod@3.22.4)
+        version: 0.8.5(debug@4.3.4)(ethers@5.7.2)(react@18.2.0)(typescript@5.3.3)(zod@3.22.4)
       axios:
         specifier: ^0.27.2
         version: 0.27.2(debug@4.3.4)
@@ -453,7 +457,7 @@ importers:
         version: 8.56.0
       eslint-plugin-import:
         specifier: ^2.26.0
-        version: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+        version: 2.29.1(@typescript-eslint/parser@5.62.0)(eslint@8.56.0)
       jest:
         specifier: ^27.5.1
         version: 27.5.1(ts-node@10.9.2)
@@ -508,7 +512,7 @@ importers:
         version: 6.9.0
       forge-std:
         specifier: github:foundry-rs/forge-std#v1
-        version: github.com/foundry-rs/forge-std/1714bee72e286e73f76e320d110e0eaf5c4e649d
+        version: git@github.com+foundry-rs/forge-std/1714bee72e286e73f76e320d110e0eaf5c4e649d
       hardhat:
         specifier: ^2.19.3
         version: 2.19.3(ts-node@10.9.2)(typescript@5.5.2)
@@ -529,7 +533,7 @@ importers:
         version: 8.3.0(eslint@8.56.0)
       eslint-config-turbo:
         specifier: latest
-        version: 2.0.6(eslint@8.56.0)
+        version: 2.1.2(eslint@8.56.0)
     devDependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.0.2
@@ -553,8 +557,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(rollup@3.20.2)
       '@rollup/plugin-node-resolve':
-        specifier: ^15.0.2
-        version: 15.0.2(rollup@3.20.2)
+        specifier: ^15.3.0
+        version: 15.3.0(rollup@3.20.2)
       '@rollup/plugin-typescript':
         specifier: ^11.1.0
         version: 11.1.0(rollup@3.20.2)(typescript@5.5.2)
@@ -593,7 +597,7 @@ importers:
         version: 4.7.5
       viem:
         specifier: 2.7.16
-        version: 2.7.16(typescript@5.3.3)(zod@3.22.4)
+        version: 2.7.16(typescript@5.4.5)
     devDependencies:
       '@babel/core':
         specifier: ^7.21.4
@@ -624,7 +628,7 @@ importers:
         version: 18.15.11
       abitype:
         specifier: ^0.2.5
-        version: 0.2.5(typescript@5.3.3)(zod@3.22.4)
+        version: 0.2.5(typescript@5.4.5)
       babel-jest:
         specifier: ^29.5.0
         version: 29.5.0(@babel/core@7.21.4)
@@ -6278,6 +6282,7 @@ packages:
   /@opentelemetry/instrumentation@0.46.0(@opentelemetry/api@1.9.0):
     resolution: {integrity: sha512-a9TijXZZbk0vI5TGLZl+0kxyFfrXHhX6Svtz7Pp2/VBlCSKrazuULEyoJQrOknJyFWNMEmbbJgOciHCCpQcisw==}
     engines: {node: '>=14'}
+    requiresBuild: true
     peerDependencies:
       '@opentelemetry/api': ^1.3.0
     dependencies:
@@ -7830,11 +7835,11 @@ packages:
       rollup: 3.20.2
     dev: false
 
-  /@rollup/plugin-node-resolve@15.0.2(rollup@3.20.2):
-    resolution: {integrity: sha512-Y35fRGUjC3FaurG722uhUuG8YHOJRJQbI6/CkbRkdPotSpDj9NtIN85z1zrcyDcCQIW4qp5mgG72U+gJ0TAFEg==}
+  /@rollup/plugin-node-resolve@15.3.0(rollup@3.20.2):
+    resolution: {integrity: sha512-9eO5McEICxMzJpDW9OnMYSv4Sta3hmt7VtBFz5zR9273suNOydOyq/FrGeGy+KsTRFm8w0SLVhzig2ILFT63Ag==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^2.78.0||^3.0.0
+      rollup: ^2.78.0||^3.0.0||^4.0.0
     peerDependenciesMeta:
       rollup:
         optional: true
@@ -7842,7 +7847,6 @@ packages:
       '@rollup/pluginutils': 5.1.0(rollup@3.20.2)
       '@types/resolve': 1.20.2
       deepmerge: 4.3.1
-      is-builtin-module: 3.2.1
       is-module: 1.0.0
       resolve: 1.22.8
       rollup: 3.20.2
@@ -9787,6 +9791,31 @@ packages:
     resolution: {integrity: sha512-ZYyrkx5k4Eoy2WM63TYTOPwiNFrylCMPhR3rjMiSHjrB5Sh97bPPU0z1EtxzDkZJJxVxmb09kQdeBrs/Mwkd3w==}
     dev: false
 
+  /@wagmi/connectors@0.1.2(@wagmi/core@0.8.5)(debug@4.3.4)(ethers@5.7.2)(typescript@5.3.3):
+    resolution: {integrity: sha512-YfhZMQMqBl69xbhs5rokGjAVfKN9Ynlsw4SgU/BGuxKpHY9VRWUGAEhgpHRTVcs72qBick3HNQv4wuFqx0Z1CQ==}
+    peerDependencies:
+      '@wagmi/core': 0.8.x
+      ethers: ^5.0.0
+    peerDependenciesMeta:
+      '@wagmi/core':
+        optional: true
+    dependencies:
+      '@coinbase/wallet-sdk': 3.9.3
+      '@ledgerhq/connect-kit-loader': 1.1.8
+      '@wagmi/core': 0.8.5(debug@4.3.4)(ethers@5.7.2)(react@18.2.0)(typescript@5.3.3)(zod@3.22.4)
+      '@walletconnect/ethereum-provider': 1.8.0(debug@4.3.4)
+      abitype: 0.1.8(typescript@5.3.3)
+      ethers: 5.7.2
+      eventemitter3: 4.0.7
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - encoding
+      - supports-color
+      - typescript
+      - utf-8-validate
+    dev: false
+
   /@wagmi/connectors@0.1.2(@wagmi/core@0.8.5)(debug@4.3.4)(ethers@5.7.2)(typescript@5.5.2):
     resolution: {integrity: sha512-YfhZMQMqBl69xbhs5rokGjAVfKN9Ynlsw4SgU/BGuxKpHY9VRWUGAEhgpHRTVcs72qBick3HNQv4wuFqx0Z1CQ==}
     peerDependencies:
@@ -9923,6 +9952,37 @@ packages:
       '@wagmi/connectors': 0.1.2(@wagmi/core@0.8.5)(debug@4.3.4)(ethers@5.7.2)(typescript@5.5.2)
       '@walletconnect/ethereum-provider': 2.10.0
       abitype: 0.2.5(typescript@5.5.2)(zod@3.22.4)
+      ethers: 5.7.2
+      eventemitter3: 4.0.7
+      zustand: 4.5.2(@types/react@18.0.26)(immer@10.1.1)(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+      - bufferutil
+      - debug
+      - encoding
+      - immer
+      - react
+      - supports-color
+      - typescript
+      - utf-8-validate
+      - zod
+    dev: false
+
+  /@wagmi/core@0.8.5(debug@4.3.4)(ethers@5.7.2)(react@18.2.0)(typescript@5.3.3)(zod@3.22.4):
+    resolution: {integrity: sha512-+oUQvJTs81QeD/vXqrhCSNVIiQy27yeHFiCWeDrvYZNyagp+8JO3wDom0pEd4UqEqhzHvFzAcHTmPWEq88B5uA==}
+    peerDependencies:
+      '@coinbase/wallet-sdk': '>=3.6.0'
+      '@walletconnect/ethereum-provider': '>=1.7.5'
+      ethers: '>=5.5.1'
+    peerDependenciesMeta:
+      '@coinbase/wallet-sdk':
+        optional: true
+      '@walletconnect/ethereum-provider':
+        optional: true
+    dependencies:
+      '@wagmi/chains': 0.1.5
+      '@wagmi/connectors': 0.1.2(@wagmi/core@0.8.5)(debug@4.3.4)(ethers@5.7.2)(typescript@5.3.3)
+      abitype: 0.2.5(typescript@5.3.3)(zod@3.22.4)
       ethers: 5.7.2
       eventemitter3: 4.0.7
       zustand: 4.5.2(@types/react@18.0.26)(immer@10.1.1)(react@18.2.0)
@@ -10778,6 +10838,15 @@ packages:
     deprecated: Use your platform's native atob() and btoa() methods instead
     dev: true
 
+  /abitype@0.1.8(typescript@5.3.3):
+    resolution: {integrity: sha512-2pde0KepTzdfu19ZrzYTYVIWo69+6UbBCY4B1RDiwWgo2XZtFSJhF6C+XThuRXbbZ823J0Rw1Y5cP0NXYVcCdQ==}
+    engines: {pnpm: '>=7'}
+    peerDependencies:
+      typescript: '>=4.7.4'
+    dependencies:
+      typescript: 5.3.3
+    dev: false
+
   /abitype@0.1.8(typescript@5.5.2):
     resolution: {integrity: sha512-2pde0KepTzdfu19ZrzYTYVIWo69+6UbBCY4B1RDiwWgo2XZtFSJhF6C+XThuRXbbZ823J0Rw1Y5cP0NXYVcCdQ==}
     engines: {pnpm: '>=7'}
@@ -10799,6 +10868,19 @@ packages:
     dependencies:
       typescript: 5.3.3
       zod: 3.22.4
+    dev: false
+
+  /abitype@0.2.5(typescript@5.4.5):
+    resolution: {integrity: sha512-t1iiokWYpkrziu4WL2Gb6YdGvaP9ZKs7WnA39TI8TsW2E99GVRgDPW/xOKhzoCdyxOYt550CNYEFluCwGaFHaA==}
+    engines: {pnpm: '>=7'}
+    peerDependencies:
+      typescript: '>=4.7.4'
+      zod: '>=3.19.1'
+    peerDependenciesMeta:
+      zod:
+        optional: true
+    dependencies:
+      typescript: 5.4.5
     dev: true
 
   /abitype@0.2.5(typescript@5.5.2)(zod@3.22.4):
@@ -10843,6 +10925,20 @@ packages:
     dependencies:
       typescript: 5.3.3
       zod: 3.22.4
+    dev: false
+
+  /abitype@1.0.0(typescript@5.4.5):
+    resolution: {integrity: sha512-NMeMah//6bJ56H5XRj8QCV4AwuW6hB6zqz2LnhhLdcWVQOsXki6/Pn3APeqxCma62nXIcmZWdu1DlHWS74umVQ==}
+    peerDependencies:
+      typescript: '>=5.0.4'
+      zod: ^3 >=3.22.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      zod:
+        optional: true
+    dependencies:
+      typescript: 5.4.5
     dev: false
 
   /abitype@1.0.0(typescript@5.5.2)(zod@3.22.4):
@@ -10936,6 +11032,7 @@ packages:
 
   /acorn-import-assertions@1.9.0(acorn@8.11.3):
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
+    requiresBuild: true
     peerDependencies:
       acorn: ^8
     dependencies:
@@ -12052,11 +12149,6 @@ packages:
     requiresBuild: true
     dependencies:
       node-gyp-build: 4.8.1
-    dev: false
-
-  /builtin-modules@3.3.0:
-    resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
-    engines: {node: '>=6'}
     dev: false
 
   /busboy@1.6.0:
@@ -13910,13 +14002,13 @@ packages:
       eslint: 8.56.0
     dev: false
 
-  /eslint-config-turbo@2.0.6(eslint@8.56.0):
-    resolution: {integrity: sha512-PkRjFnZUZWPcrYT4Xoi5OWOUtnn6xVGh88I6TsayiH4AQZuLs/MDmzfJRK+PiWIrI7Q7sbsVEQP+nUyyRE3uAw==}
+  /eslint-config-turbo@2.1.2(eslint@8.56.0):
+    resolution: {integrity: sha512-UCNwxBrTOx0K41h1OrwMg7vPdGvcGSAlj40ZzpuUi0S2Muac2UOs+6F2dMYQiKg7lX2HAtyHXlF0T2wlWNHjGg==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
       eslint: 8.56.0
-      eslint-plugin-turbo: 2.0.6(eslint@8.56.0)
+      eslint-plugin-turbo: 2.1.2(eslint@8.56.0)
     dev: false
 
   /eslint-import-resolver-node@0.3.9:
@@ -13952,6 +14044,35 @@ packages:
       - supports-color
     dev: true
 
+  /eslint-module-utils@2.8.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint@8.56.0):
+    resolution: {integrity: sha512-rXDXR3h7cs7dy9RNpUlQf80nX31XWJEyGq1tRMo+6GsO5VmTe4UTwtmonAD4ZkAsrfMVDA2wlGJ3790Ys+D49Q==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      '@typescript-eslint/parser': '*'
+      eslint: '*'
+      eslint-import-resolver-node: '*'
+      eslint-import-resolver-typescript: '*'
+      eslint-import-resolver-webpack: '*'
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
+      eslint:
+        optional: true
+      eslint-import-resolver-node:
+        optional: true
+      eslint-import-resolver-typescript:
+        optional: true
+      eslint-import-resolver-webpack:
+        optional: true
+    dependencies:
+      '@typescript-eslint/parser': 5.62.0(eslint@8.56.0)(typescript@5.5.2)
+      debug: 3.2.7(supports-color@5.5.0)
+      eslint: 8.56.0
+      eslint-import-resolver-node: 0.3.9
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /eslint-module-utils@2.8.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
     resolution: {integrity: sha512-rXDXR3h7cs7dy9RNpUlQf80nX31XWJEyGq1tRMo+6GsO5VmTe4UTwtmonAD4ZkAsrfMVDA2wlGJ3790Ys+D49Q==}
     engines: {node: '>=4'}
@@ -13979,6 +14100,41 @@ packages:
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
     transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0)(eslint@8.56.0):
+    resolution: {integrity: sha512-BbPC0cuExzhiMo4Ff1BTVwHpjjv28C5R+btTOGaCRC7UEz801up0JadwkeSk5Ued6TG34uaczuVuH6qyy5YUxw==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      '@typescript-eslint/parser': '*'
+      eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
+    dependencies:
+      '@typescript-eslint/parser': 5.62.0(eslint@8.56.0)(typescript@5.5.2)
+      array-includes: 3.1.8
+      array.prototype.findlastindex: 1.2.5
+      array.prototype.flat: 1.3.2
+      array.prototype.flatmap: 1.3.2
+      debug: 3.2.7(supports-color@5.5.0)
+      doctrine: 2.1.0
+      eslint: 8.56.0
+      eslint-import-resolver-node: 0.3.9
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint@8.56.0)
+      hasown: 2.0.2
+      is-core-module: 2.13.1
+      is-glob: 4.0.3
+      minimatch: 3.1.2
+      object.fromentries: 2.0.8
+      object.groupby: 1.0.3
+      object.values: 1.2.0
+      semver: 6.3.1
+      tsconfig-paths: 3.15.0
+    transitivePeerDependencies:
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
       - supports-color
     dev: true
 
@@ -14078,8 +14234,8 @@ packages:
       string.prototype.matchall: 4.0.11
     dev: true
 
-  /eslint-plugin-turbo@2.0.6(eslint@8.56.0):
-    resolution: {integrity: sha512-yGnpMvyBxI09ZrF5bGpaniBz57MiExTCsRnNxP+JnbMFD+xU3jG3ukRzehVol8LYNdC/G7E4HoH+x7OEpoSGAQ==}
+  /eslint-plugin-turbo@2.1.2(eslint@8.56.0):
+    resolution: {integrity: sha512-q2ikGubfVLZDPEKliiuubZc3sI5oqbKIZJ6fRi6Bldv8E3cMNH3Qt7g6hXZV4+GxwQbzEEteCYSBNbOn1DBqRg==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
@@ -15942,6 +16098,7 @@ packages:
 
   /import-in-the-middle@1.7.1:
     resolution: {integrity: sha512-1LrZPDtW+atAxH42S6288qyDFNQ2YCty+2mxEPRtfazH6Z5QwkaBSTS2ods7hnVJioF6rkRfNoA6A/MstpFXLg==}
+    requiresBuild: true
     dependencies:
       acorn: 8.11.3
       acorn-import-assertions: 1.9.0(acorn@8.11.3)
@@ -16208,13 +16365,6 @@ packages:
   /is-buffer@2.0.5:
     resolution: {integrity: sha512-i2R6zNFDwgEHJyQUtJEk0XFi1i0dPFn/oqjK3/vPCcDeJvW5NQ83V8QbicfF1SupOaB0h8ntgBC2YiE7dfyctQ==}
     engines: {node: '>=4'}
-
-  /is-builtin-module@3.2.1:
-    resolution: {integrity: sha512-BSLE3HnV2syZ0FK0iMA/yUGplUeMmNz4AW5fnTunbCIqZi4vG3WjJT9FHMy5D69xmAYBHXQhJdALdpwVxV501A==}
-    engines: {node: '>=6'}
-    dependencies:
-      builtin-modules: 3.3.0
-    dev: false
 
   /is-callable@1.2.7:
     resolution: {integrity: sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==}
@@ -23442,7 +23592,6 @@ packages:
     resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: true
 
   /typescript@5.5.2:
     resolution: {integrity: sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==}
@@ -23898,6 +24047,29 @@ packages:
       abitype: 1.0.0(typescript@5.3.3)(zod@3.22.4)
       isows: 1.0.3(ws@8.13.0)
       typescript: 5.3.3
+      ws: 8.13.0
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+      - zod
+    dev: false
+
+  /viem@2.7.16(typescript@5.4.5):
+    resolution: {integrity: sha512-yOPa9yaoJUm44m0Qe3ugHnkHol3QQlFxN3jT+bq+lQip7X7cWdPfmguyfLWX2viCXcmYZUDiQdeFbkPW9lw11Q==}
+    peerDependencies:
+      typescript: '>=5.0.4'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      '@adraffy/ens-normalize': 1.10.0
+      '@noble/curves': 1.2.0
+      '@noble/hashes': 1.3.2
+      '@scure/bip32': 1.3.2
+      '@scure/bip39': 1.2.1
+      abitype: 1.0.0(typescript@5.4.5)
+      isows: 1.0.3(ws@8.13.0)
+      typescript: 5.4.5
       ws: 8.13.0
     transitivePeerDependencies:
       - bufferutil
@@ -24925,6 +25097,7 @@ packages:
 
   /zod@3.22.4:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+    dev: false
 
   /zustand@4.4.1(@types/react@18.0.26)(immer@10.1.1)(react@18.2.0):
     resolution: {integrity: sha512-QCPfstAS4EBiTQzlaGP1gmorkh/UL1Leaj2tdj+zZCZ/9bm0WS7sI2wnfD5lpOszFqWJ1DcPnGoY8RDL61uokw==}
@@ -24968,12 +25141,8 @@ packages:
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
 
-  github.com/foundry-rs/forge-std/1714bee72e286e73f76e320d110e0eaf5c4e649d:
-    resolution: {tarball: https://codeload.github.com/foundry-rs/forge-std/tar.gz/1714bee72e286e73f76e320d110e0eaf5c4e649d}
+  git@github.com+foundry-rs/forge-std/1714bee72e286e73f76e320d110e0eaf5c4e649d:
+    resolution: {commit: 1714bee72e286e73f76e320d110e0eaf5c4e649d, repo: git@github.com:foundry-rs/forge-std.git, type: git}
     name: forge-std
     version: 1.9.2
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
