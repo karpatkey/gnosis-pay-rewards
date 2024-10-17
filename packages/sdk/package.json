@@ -1,7 +1,7 @@
 {
   "name": "@karpatkey/gnosis-pay-rewards-sdk",
   "private": false,
-  "version": "1.5.1",
+  "version": "2.0.0",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
