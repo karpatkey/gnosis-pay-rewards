@@ -1,8 +1,17 @@
+import { moneriumEureToken, moneriumGbpToken, usdcBridgeToken, circleUsdcToken } from './gnoisPayTokens';
+import { Address, getAddress } from 'viem';
+
 /**
- * The month-to-date USD volume threshold, over which the user is no
- * longer eligible for the GNO rewards.
+ * The month-to-date USD volume threshold for each currency.
+ * A maximum of EUR 20,000, USD 22,000, or GBP 18,000 will be eligible to accrue rewards per month for every user.
  */
-const MONTH_TO_DATE_USD_VOLUME_THRESHOLD = 20_000;
+const MONTH_TO_DATE_USD_VOLUME_THRESHOLD = {
+  // USDC can be either circle's native USDC or bridged from Ethereum
+  [circleUsdcToken.address]: 22_000,
+  [usdcBridgeToken.address]: 22_000,
+  [moneriumGbpToken.address]: 18_000,
+  [moneriumEureToken.address]: 20_000,
+};
 
 type CalculateWeekRewardCommonParams = {
   /**
@@ -26,6 +35,11 @@ type CalculateWeekRewardCommonParams = {
    * Four weeks USD volume
    */
   fourWeeksUsdVolume: number;
+  /**
+   * The address of the safe token to use when calculating rewards.
+   * If not provided, the rewards will be calculated based on the USD volume.
+   */
+  safeToken?: Address;
 };
 
 /**
@@ -38,17 +52,24 @@ export function calculateWeekRewardAmount({
   weekUsdVolume,
   gnoBalance,
   fourWeeksUsdVolume,
+  safeToken,
 }: CalculateWeekRewardCommonParams): number {
   if (gnoUsdPrice <= 0) {
     throw new Error('gnoUsdPrice must be greater than 0');
   }
 
-  // If the month-to-date USD volume is greater than the threshold, the user is eligible for the OG NFT holder reward
-  if (fourWeeksUsdVolume >= MONTH_TO_DATE_USD_VOLUME_THRESHOLD) {
-    return 0;
+  // Determine the threshold based on the safe token address
+  const safeTokenAddress = getAddress(safeToken ?? circleUsdcToken.address);
+  const volumeThreshold = MONTH_TO_DATE_USD_VOLUME_THRESHOLD[safeTokenAddress];
+
+  if (volumeThreshold === undefined) {
+    throw new Error(`Invalid safe token address: ${safeTokenAddress}`);
   }
 
-  if (weekUsdVolume <= 0 || gnoBalance === 0) {
+  // safeCurrency volume threshold - four-week volume + 1-week
+  const netVolume = volumeThreshold - fourWeeksUsdVolume + weekUsdVolume;
+  // If the month-to-date USD volume is greater than the threshold, the user is eligible for the OG NFT holder reward
+  if (netVolume >= volumeThreshold) {
     return 0;
   }
 
